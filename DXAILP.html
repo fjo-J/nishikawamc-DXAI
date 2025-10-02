@@ -7,12 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'Noto Sans JP', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('https://placehold.co/1200x600/e2e8f0/64748b?text=DXのアイデアを形に');
+            background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1556761175-b413da4b2488?q=80&w=1200&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -24,22 +26,33 @@
             background-color: #3b82f6;
             margin-top: 0.5rem;
         }
-        .step-circle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
         .cta-button {
             transition: all 0.3s ease;
         }
         .cta-button:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        /* Swiper Styles */
+        .swiper-slide {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #3b82f6;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #3b82f6;
         }
     </style>
 </head>
@@ -78,6 +91,75 @@
             </div>
         </div>
     </section>
+
+    <!-- 提案パターンカルーセル -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold section-title inline-block">貴社の課題に合わせた解決策をご提案します</h2>
+                <p class="mt-6 text-lg max-w-3xl mx-auto">私たちの支援は、画一的なものではありません。貴社の状況や目指すゴールに応じて、最適なDX/AI活用の形をデザインします。</p>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper relative pb-12">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1: 社内業務DX化 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-lg shadow-md h-full flex flex-col">
+                            <i class="fas fa-sitemap text-5xl text-blue-500 mb-4"></i>
+                            <h3 class="font-bold text-2xl mb-3">社内業務DX化</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">稟議、経費精算、在庫管理など、日々の定型業務をデジタル化。無駄をなくし、生産性を劇的に向上させます。</p>
+                            <div class="mt-auto pt-4 border-t">
+                                <h4 class="font-semibold text-left">こんな企業様におすすめ</h4>
+                                <ul class="text-left text-sm mt-2 space-y-1 text-gray-700">
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>承認フローに時間がかかる</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>紙の書類やExcel管理が多い</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>部署間の連携がスムーズでない</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4: 顧客管理・在庫管理DX -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-lg shadow-md h-full flex flex-col">
+                            <i class="fas fa-boxes-stacked text-5xl text-blue-500 mb-4"></i>
+                            <h3 class="font-bold text-2xl mb-3">顧客管理・在庫管理DX</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">煩雑な顧客情報や在庫状況をデジタルで一元管理。リアルタイムな情報共有で、販売機会の損失を防ぎ、業務効率を大幅に改善します。</p>
+                            <div class="mt-auto pt-4 border-t">
+                                <h4 class="font-semibold text-left">こんな企業様におすすめ</h4>
+                                <ul class="text-left text-sm mt-2 space-y-1 text-gray-700">
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>顧客情報が属人化している</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>欠品や過剰在庫が多い</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>受発注業務を手作業で行っている</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5: 顧客体験のパーソナライズ -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-lg shadow-md h-full flex flex-col">
+                            <i class="fas fa-user-check text-5xl text-blue-500 mb-4"></i>
+                            <h3 class="font-bold text-2xl mb-3">顧客体験のパーソナライズ</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">顧客の購買履歴や行動をAIが分析し、一人ひとりに最適な商品や情報を推薦。顧客満足度とリピート率を向上させます。</p>
+                            <div class="mt-auto pt-4 border-t">
+                                <h4 class="font-semibold text-left">こんな企業様におすすめ</h4>
+                                <ul class="text-left text-sm mt-2 space-y-1 text-gray-700">
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>ECサイトの売上を伸ばしたい</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>顧客に合わせたアプローチがしたい</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>LTV（顧客生涯価値）を高めたい</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- 柔軟な契約モデル -->
     <section class="py-16 bg-blue-50">
@@ -135,7 +217,7 @@
                 <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
                     <i class="fas fa-user-tie text-5xl text-blue-500 mb-4"></i>
                     <h3 class="font-bold text-xl mb-2">経営のプロが伴走</h3>
-                    <p>ただのシステム開発ではありません。企業経営経験者や新規事業開発のプロが、事業成長に繋がるシステム設計をゼロから一緒に考えます。</p>
+                    <p>ただのシステム開発ではありません。中小企業診断士の資格を持つ経営のプロが、事業成長に繋がるシステム設計をゼロから一緒に考えます。</p>
                 </div>
                 <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
                     <i class="fas fa-drafting-compass text-5xl text-blue-500 mb-4"></i>
@@ -151,7 +233,7 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-4">まずは「無料アイデア相談会」へ</h2>
             <p class="text-xl max-w-2xl mx-auto mb-8">あなたの頭の中にあるアイデアの種を、私たちに話してみませんか？<br>相談したからといって、契約を強要することは一切ありません。お気軽にお申し込みください。</p>
-            <a href="#" class="cta-button bg-white text-blue-700 font-bold text-xl py-4 px-10 rounded-full shadow-lg">
+            <a href="https://meetings-na2.hubspot.com/fujino3" target="_blank" rel="noopener noreferrer" class="cta-button bg-white text-blue-700 font-bold text-xl py-4 px-10 rounded-full shadow-lg">
                 <i class="fas fa-comments mr-2"></i> 無料相談を申し込む
             </a>
         </div>
@@ -166,6 +248,37 @@
         </div>
     </footer>
 
+    <!-- Swiper.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        }
+      });
+    </script>
+
 </body>
 </html>
+
 
