@@ -3,316 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DX/AI支援事業のご提案 | 西河マネジメントセンター</title>
+    <title>DX / AI支援事業のご提案 | 西河マネジメントセンター</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         body {
-            font-family: 'Noto Sans JP', sans-serif;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
         }
-        .hero-bg {
-            background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1556761175-b413da4b2488?q=80&w=1200&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
+        .gradient-text {
+            background: linear-gradient(to right, #4F46E5, #0891B2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: #3b82f6;
-            margin-top: 0.5rem;
+        .bg-gradient-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 100%);
         }
-        .cta-button {
-            transition: all 0.3s ease;
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        /* Swiper Styles */
         .swiper-slide {
             height: auto;
             display: flex;
-            flex-direction: column;
         }
         .swiper-button-next, .swiper-button-prev {
-            color: #3b82f6;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .swiper-button-next::after, .swiper-button-prev::after {
-            font-size: 24px;
-            font-weight: bold;
+            color: #1e40af;
         }
         .swiper-pagination-bullet-active {
-            background-color: #3b82f6;
+            background-color: #1e40af;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-800">
 
-    <!-- ヒーローセクション -->
-    <section class="hero-bg text-white">
-        <div class="container mx-auto px-6 py-24 text-center">
-            <h1 class="text-sm font-bold uppercase tracking-widest text-blue-300">西河マネジメントセンターからの新しいご提案</h1>
-            <h2 class="text-4xl md:text-6xl font-black mt-4 mb-6">DX/AI研修の「次の一歩」、<br>一緒に踏み出しませんか？</h2>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto">「学んだ知識を、どう事業に活かすか？」——その課題、私たちが解決します。<br>AIを活用し、あなたのアイデアを高速・低リスクで”見える化”する新しい支援サービスです。</p>
+    <!-- ヘッダー -->
+    <header class="bg-gradient-header text-white p-8 lg:p-12 text-center">
+        <h1 class="text-4xl lg:text-6xl font-black mb-2 fade-in-up">そのアイデア、AIでカタチにしませんか？</h1>
+        <p class="text-xl lg:text-2xl font-light text-slate-200 fade-in-up" style="animation-delay: 0.2s;">研修で終わらせない、次の一歩へ。ビジネスの変革を高速で実現します。</p>
+        <div class="mt-8 fade-in-up" style="animation-delay: 0.4s;">
+             <a href="https://meetings-na2.hubspot.com/fujino3" target="_blank" class="bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+                <i class="fas fa-comment-dots mr-2"></i> まずは無料相談を申し込む
+            </a>
         </div>
-    </section>
+    </header>
 
-    <!-- イントロダクション：お客様の課題 -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold section-title inline-block">こんなお悩み、抱えていませんか？</h2>
-            <p class="mt-6 text-lg max-w-2xl mx-auto">当社の研修を受講された多くの経営者様から、こんな声をいただいています。</p>
-            <div class="grid md:grid-cols-3 gap-8 mt-12 text-left">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
-                    <i class="fas fa-lightbulb-slash text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">アイデアがまとまらない</h3>
-                    <p>「DXで何かしたい」という想いはあるが、具体的なシステムや業務改善のイメージが湧かない。</p>
+    <!-- メインコンテンツ -->
+    <main class="container mx-auto p-6 lg:p-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 1. 課題提起 (画像参考のデザイン) -->
+            <div class="md:col-span-2 lg:col-span-3 fade-in-up">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">こんなお悩み、抱えていませんか？</h2>
+                    <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">当社の研修を受講された多くの経営者様から、こんな声をいただいています。</p>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
-                    <i class="fas fa-file-invoice-dollar text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">費用とリスクが怖い</h3>
-                    <p>開発には莫大な費用がかかる印象。「作り始めたら最後までやり切らないと…」と思うと踏み出せない。</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
-                    <i class="fas fa-user-hard-hat text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">どこに頼めば良いか不明</h3>
-                    <p>自社の業務を本当に理解してくれる開発会社を見つけるのが難しい。専門用語ばかりで話が進まない。</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- お悩み 1 -->
+                    <div class="bg-gray-100/60 p-8 rounded-lg text-center">
+                         <i class="fas fa-lightbulb text-4xl text-blue-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">アイデアがまとまらない</h3>
+                        <p class="text-slate-600">「DXで何かしたい」という想いはあるが、具体的なシステムや業務改善のイメージが湧かない。</p>
+                    </div>
+                    <!-- お悩み 2 -->
+                    <div class="bg-gray-100/60 p-8 rounded-lg text-center">
+                         <i class="fas fa-dollar-sign text-4xl text-blue-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">費用とリスクが怖い</h3>
+                        <p class="text-slate-600">開発には莫大な費用がかかる印象。「作り始めたら最後までやり切らないと…」と思うと踏み出せない。</p>
+                    </div>
+                    <!-- お悩み 3 -->
+                    <div class="bg-gray-100/60 p-8 rounded-lg text-center">
+                        <i class="fas fa-search text-4xl text-blue-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">どこに頼めば良いか不明</h3>
+                        <p class="text-slate-600">自社の業務を本当に理解してくれる開発会社を見つけるのが難しい。専門用語ばかりで話が進まない。</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- 提案パターンカルーセル -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold section-title inline-block">貴社の課題に合わせた解決策をご提案します</h2>
-                <p class="mt-6 text-lg max-w-3xl mx-auto">私たちの支援は、画一的なものではありません。貴社の状況や目指すゴールに応じて、最適なDX/AI活用の形をデザインします。</p>
-            </div>
-            <!-- Swiper -->
-            <div class="swiper mySwiper relative pb-12">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1: 社内業務DX化 -->
-                    <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-lg shadow-md h-full flex flex-col">
-                            <i class="fas fa-sitemap text-5xl text-blue-500 mb-4"></i>
-                            <h3 class="font-bold text-2xl mb-3">社内業務DX化</h3>
-                            <p class="text-gray-600 mb-4 flex-grow">稟議、経費精算、在庫管理など、日々の定型業務をデジタル化。無駄をなくし、生産性を劇的に向上させます。</p>
-                            <div class="mt-auto pt-4 border-t">
-                                <h4 class="font-semibold text-left">こんな企業様におすすめ</h4>
-                                <ul class="text-left text-sm mt-2 space-y-1 text-gray-700">
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>承認フローに時間がかかる</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>紙の書類やExcel管理が多い</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>部署間の連携がスムーズでない</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 2: 自社アプリ制作 -->
-                    <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-lg shadow-md h-full flex flex-col">
-                            <i class="fas fa-mobile-alt text-5xl text-blue-500 mb-4"></i>
-                            <h3 class="font-bold text-2xl mb-3">自社アプリ制作</h3>
-                            <p class="text-gray-600 mb-4 flex-grow">顧客との直接的なつながりを生み出すオリジナルアプリを開発。プッシュ通知やポイント機能で、リピート率と顧客単価の向上を図ります。</p>
-                            <div class="mt-auto pt-4 border-t">
-                                <h4 class="font-semibold text-left">こんな企業様におすすめ</h4>
-                                <ul class="text-left text-sm mt-2 space-y-1 text-gray-700">
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>顧客をファン化させたい</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>リピート購入を増やしたい</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>独自のブランド体験を提供したい</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 3: AIエージェント活用 -->
-                    <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-lg shadow-md h-full flex flex-col">
-                            <i class="fas fa-robot text-5xl text-blue-500 mb-4"></i>
-                            <h3 class="font-bold text-2xl mb-3">AIエージェント活用</h3>
-                            <p class="text-gray-600 mb-4 flex-grow">問い合わせ対応、データ入力、情報収集などを自動化するAIアシスタントを導入。24時間365日働く優秀な社員です。</p>
-                            <div class="mt-auto pt-4 border-t">
-                                <h4 class="font-semibold text-left">こんな企業様におすすめ</h4>
-                                <ul class="text-left text-sm mt-2 space-y-1 text-gray-700">
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>同じような問い合わせが多い</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>人手不足に悩んでいる</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>夜間や休日の対応を自動化したい</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 4: 専用RAG開発 -->
-                    <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-lg shadow-md h-full flex flex-col">
-                            <i class="fas fa-book-reader text-5xl text-blue-500 mb-4"></i>
-                            <h3 class="font-bold text-2xl mb-3">専用RAG開発</h3>
-                            <p class="text-gray-600 mb-4 flex-grow">社内マニュアルや過去の膨大な資料をAIに学習させ、専門的な質問にも即答できる「社内版ChatGPT」を構築します。</p>
-                            <div class="mt-auto pt-4 border-t">
-                                <h4 class="font-semibold text-left">こんな企業様におすすめ</h4>
-                                <ul class="text-left text-sm mt-2 space-y-1 text-gray-700">
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>専門知識の継承に課題がある</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>欲しい情報がすぐに見つからない</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>新人の教育コストを削減したい</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 5: 顧客体験のパーソナライズ -->
-                    <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-lg shadow-md h-full flex flex-col">
-                            <i class="fas fa-user-check text-5xl text-blue-500 mb-4"></i>
-                            <h3 class="font-bold text-2xl mb-3">顧客体験のパーソナライズ</h3>
-                            <p class="text-gray-600 mb-4 flex-grow">顧客の購買履歴や行動をAIが分析し、一人ひとりに最適な商品や情報を推薦。顧客満足度とリピート率を向上させます。</p>
-                            <div class="mt-auto pt-4 border-t">
-                                <h4 class="font-semibold text-left">こんな企業様におすすめ</h4>
-                                <ul class="text-left text-sm mt-2 space-y-1 text-gray-700">
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>ECサイトの売上を伸ばしたい</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>顧客に合わせたアプローチがしたい</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i><span>LTV（顧客生涯価値）を高めたい</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
+            <!-- 2. 解決策 -->
+            <div class="card p-6 md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.2s;">
+                <div class="text-center bg-blue-50 p-8 rounded-lg">
+                    <p class="text-lg font-semibold text-blue-700 mb-2">そんな悩みを解決するために</p>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">私たちは、<span class="gradient-text">「アイデアの壁打ち」</span>から始めます。</h2>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                        漠然とした「こんなことができたら…」というアイデアだけで大丈夫です。経営のプロが対話し、AIがそれを具体的な「画面」に落とし込む。開発のリスクを負う前に、まずはアイデアをカタチにするところまでを、驚きの速さと低コストでご支援します。
+                    </p>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Navigation -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- 柔軟な契約モデル -->
-    <section class="py-16 bg-blue-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold section-title inline-block">ご契約も、ステップごとで安心です</h2>
-                <p class="mt-6 text-lg max-w-3xl mx-auto">「作ってみたけど、イメージと違った…」そんな後悔はさせません。当社の契約は、お客様がいつでも主導権を握れるマイルストーン形式です。</p>
             </div>
             
-            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-2">
-
-                <!-- Step 1: UIデザイン契約 -->
-                <div class="flex-1 text-center p-6 bg-white rounded-xl shadow-lg border-t-4 border-blue-500 w-full md:w-auto">
-                    <div class="text-blue-500 text-4xl mb-4"><i class="fas fa-drafting-compass"></i></div>
-                    <h3 class="font-bold text-xl mb-2">STEP 1<br>UIデザイン契約</h3>
-                    <p class="text-gray-600">まずは「要件定義～UI作成」までをご契約。完成した「見た目」を元に、次の開発に進むかをご判断いただけます。</p>
-                </div>
-
-                <!-- 矢印と判断ゲート -->
-                <div class="flex-1 text-center p-4">
-                     <div class="text-green-500 text-5xl mb-3"><i class="fas fa-handshake"></i></div>
-                     <h3 class="font-bold text-xl mb-2">ここで一旦、契約満了</h3>
-                     <p class="text-gray-600 bg-green-100 p-3 rounded-md font-semibold">開発に進む場合のみ、<br class="md:hidden">次のステップへ</p>
-                </div>
-
-                <!-- Step 2: 開発契約 -->
-                <div class="flex-1 text-center p-6 bg-white rounded-xl shadow-lg border-t-4 border-gray-400 w-full md:w-auto">
-                    <div class="text-gray-500 text-4xl mb-4"><i class="fas fa-code"></i></div>
-                    <h3 class="font-bold text-xl mb-2">STEP 2<br>システム開発契約</h3>
-                    <p class="text-gray-600">UIにご納得いただけたら、初めて開発フェーズをご契約。仕様書通りのシステムを構築します。(もちろん、ここで終了も可能です)</p>
+            <!-- 3. 活用パターンカルーセル -->
+            <div class="card p-6 md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.3s;">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">貴社の課題に合わせたDX/AI活用パターン</h2>
+                <div class="swiper mySwiper relative pb-12">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide p-2">
+                            <div class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col">
+                                <i class="fas fa-sitemap text-4xl text-blue-500 mb-4"></i>
+                                <h3 class="font-bold text-xl mb-3">社内業務DX化</h3>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow">稟議、経費精算、日報管理など、日々の定型業務をデジタル化。無駄をなくし、生産性を劇的に向上させます。</p>
+                                <div class="mt-auto pt-4 border-t">
+                                    <h4 class="font-semibold text-left text-xs text-slate-500 mb-2">こんな企業様におすすめ</h4>
+                                    <ul class="text-left text-sm space-y-1 text-gray-700">
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>承認フローに時間がかかる</span></li>
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>紙やExcel管理が多い</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide p-2">
+                            <div class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col">
+                                <i class="fas fa-mobile-alt text-4xl text-blue-500 mb-4"></i>
+                                <h3 class="font-bold text-xl mb-3">自社アプリ制作</h3>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow">顧客との直接的なつながりを生み出すオリジナルアプリを開発。プッシュ通知やポイント機能でリピート率を高めます。</p>
+                                <div class="mt-auto pt-4 border-t">
+                                    <h4 class="font-semibold text-left text-xs text-slate-500 mb-2">こんな企業様におすすめ</h4>
+                                    <ul class="text-left text-sm space-y-1 text-gray-700">
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>顧客をファン化させたい</span></li>
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>リピート購入を増やしたい</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide p-2">
+                            <div class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col">
+                                <i class="fas fa-robot text-4xl text-blue-500 mb-4"></i>
+                                <h3 class="font-bold text-xl mb-3">AIエージェント活用</h3>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow">問い合わせ対応やデータ入力を自動化するAIアシスタントを導入。24時間365日働く優秀な社員として活躍します。</p>
+                                <div class="mt-auto pt-4 border-t">
+                                    <h4 class="font-semibold text-left text-xs text-slate-500 mb-2">こんな企業様におすすめ</h4>
+                                    <ul class="text-left text-sm space-y-1 text-gray-700">
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>同じような問い合わせが多い</span></li>
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>人手不足に悩んでいる</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide p-2">
+                             <div class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col">
+                                <i class="fas fa-book-reader text-4xl text-blue-500 mb-4"></i>
+                                <h3 class="font-bold text-xl mb-3">専用RAG開発</h3>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow">社内マニュアル等をAIに学習させ、専門的な質問にも即答できる「社内版ChatGPT」を構築します。</p>
+                                <div class="mt-auto pt-4 border-t">
+                                    <h4 class="font-semibold text-left text-xs text-slate-500 mb-2">こんな企業様におすすめ</h4>
+                                    <ul class="text-left text-sm space-y-1 text-gray-700">
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>専門知識の継承に課題</span></li>
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>新人の教育コストを削減したい</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                         <div class="swiper-slide p-2">
+                            <div class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col">
+                                <i class="fas fa-user-check text-4xl text-blue-500 mb-4"></i>
+                                <h3 class="font-bold text-xl mb-3">顧客体験パーソナライズ</h3>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow">顧客データをAIが分析し、一人ひとりに最適化された商品や情報を提供。顧客満足度とLTVを最大化します。</p>
+                                <div class="mt-auto pt-4 border-t">
+                                    <h4 class="font-semibold text-left text-xs text-slate-500 mb-2">こんな企業様におすすめ</h4>
+                                    <ul class="text-left text-sm space-y-1 text-gray-700">
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>ECサイトの転換率を上げたい</span></li>
+                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1 text-xs"></i><span>顧客に合わせた接客がしたい</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination mt-8"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
-             <p class="text-center mt-10 text-gray-700 font-semibold text-lg bg-white p-4 rounded-lg shadow-sm">
-                <i class="fas fa-info-circle mr-2 text-blue-500"></i>
-                各ステップで契約が完了するため、ご予算や事業の進捗に合わせて柔軟に計画を進められます。
-            </p>
-        </div>
-    </section>
 
-    <!-- サービスの特徴・メリット -->
-    <section class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold section-title inline-block mb-12 text-center w-full">お客様のメリット</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <i class="fas fa-layer-group text-5xl text-blue-500 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">低リスクで始められる</h3>
-                    <p>いきなり数百万〜数千万の開発契約を結ぶ必要はありません。「UIデザイン作成まで」で一度区切ることができ、マイルストーンごとの支払いで安心です。</p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <i class="fas fa-bolt-lightning text-5xl text-blue-500 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">圧倒的なスピード感</h3>
-                    <p>通常3〜4ヶ月かかる上流工程を、AIの力で最短1ヶ月に短縮。ビジネスチャンスを逃しません。</p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <i class="fas fa-user-tie text-5xl text-blue-500 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">経営のプロが伴走</h3>
-                    <p>ただのシステム開発ではありません。中小企業診断士の資格を持つ経営のプロが、事業成長に繋がるシステム設計をゼロから一緒に考えます。</p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <i class="fas fa-drafting-compass text-5xl text-blue-500 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">失敗しない設計図</h3>
-                    <p>完成したUIデザインと要件定義書は、開発の「完璧な設計図」。これがあれば、どの開発会社に依頼しても認識のズレなくプロジェクトを進められます。</p>
+            <!-- 4. サービスの流れ -->
+            <div class="card p-6 md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.4s;">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">サービスの流れ</h2>
+                <div class="relative pl-6">
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+                    <!-- Step 1 -->
+                    <div class="mb-8 relative flex items-center">
+                        <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold z-10">1</div>
+                        <div class="ml-12 p-4 bg-blue-50 rounded-lg w-full"><h3 class="font-bold text-blue-800">無料相談・ヒアリング</h3><p class="text-sm text-slate-600">まずは貴社の課題や漠然としたアイデアをお聞かせください。</p></div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="mb-8 relative flex items-center">
+                        <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold z-10">2</div>
+                        <div class="ml-12 p-4 bg-blue-50 rounded-lg w-full"><h3 class="font-bold text-blue-800">DX/AIコンサルティング</h3><p class="text-sm text-slate-600">アイデアをビジネス企画へ。実現可能性や効果を具体化します。</p></div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="mb-8 relative flex items-center">
+                        <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold z-10">3</div>
+                        <div class="ml-12 p-4 bg-blue-50 rounded-lg w-full"><h3 class="font-bold text-blue-800">UIデザイン・要件定義</h3><p class="text-sm text-slate-600">AIが企画を元に最適な画面デザインとシステム要件を作成します。</p></div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="mb-8 relative flex items-center">
+                        <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold z-10">4</div>
+                        <div class="ml-12 p-4 bg-blue-50 rounded-lg w-full"><h3 class="font-bold text-blue-800">システム開発</h3><p class="text-sm text-slate-600">信頼できるパートナー企業と共に、スピーディに開発を進めます。</p></div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="relative flex items-center">
+                        <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold z-10">5</div>
+                        <div class="ml-12 p-4 bg-blue-50 rounded-lg w-full"><h3 class="font-bold text-blue-800">納品・運用支援</h3><p class="text-sm text-slate-600">完成品の納品後も、事業を成功に導くためのサポートを継続します。</p></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- CTA（行動喚起）セクション -->
-    <section class="py-20 bg-blue-700 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-black mb-4">まずは「無料アイデア相談会」へ</h2>
-            <p class="text-xl max-w-2xl mx-auto mb-8">あなたの頭の中にあるアイデアの種を、私たちに話してみませんか？<br>相談したからといって、契約を強要することは一切ありません。お気軽にお申し込みください。</p>
-            <a href="https://meetings-na2.hubspot.com/fujino3" target="_blank" rel="noopener noreferrer" class="cta-button bg-white text-blue-700 font-bold text-xl py-4 px-10 rounded-full shadow-lg">
-                <i class="fas fa-comments mr-2"></i> 無料相談を申し込む
+            <!-- 5. 段階的契約モデル -->
+            <div class="card p-6 md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.5s;">
+                 <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">リスクを最小限に抑える<br><span class="gradient-text">段階的契約モデル</span></h2>
+                 <p class="text-center text-slate-600 mb-8">各ステップの完了ごとに契約を判断できるため、無駄な投資は一切ありません。</p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-2">
+                    <div class="text-center p-2">
+                        <div class="p-4 bg-blue-100 border-2 border-blue-600 border-dashed rounded-lg min-h-[120px] flex flex-col justify-center">
+                            <i class="fas fa-comments text-3xl text-blue-600 mb-2"></i>
+                            <div class="font-bold text-sm">Step 1<br>DX/AIコンサル</div>
+                        </div>
+                        <div class="mt-2 flex items-center justify-center"><i class="fas fa-file-signature text-green-600 mr-2"></i><span class="text-sm font-bold text-green-700">ご契約①</span></div>
+                    </div>
+                    <div class="text-2xl text-gray-300 transform rotate-90 md:rotate-0"><i class="fas fa-chevron-right"></i></div>
+                    <div class="text-center p-2">
+                        <div class="p-4 bg-blue-100 border-2 border-blue-600 border-dashed rounded-lg min-h-[120px] flex flex-col justify-center">
+                            <i class="fas fa-drafting-compass text-3xl text-blue-600 mb-2"></i>
+                            <div class="font-bold text-sm">Step 2<br>UIデザイン・要件定義</div>
+                        </div>
+                        <div class="mt-2 flex items-center justify-center"><i class="fas fa-file-signature text-green-600 mr-2"></i><span class="text-sm font-bold text-green-700">ご契約②</span></div>
+                    </div>
+                    <div class="text-2xl text-gray-300 transform rotate-90 md:rotate-0"><i class="fas fa-chevron-right"></i></div>
+                    <div class="text-center p-2">
+                        <div class="p-4 bg-gray-100 rounded-lg min-h-[120px] flex flex-col justify-center">
+                            <i class="fas fa-code text-3xl text-gray-500 mb-2"></i>
+                            <div class="font-bold text-sm">Step 3<br>システム開発</div>
+                        </div>
+                         <div class="mt-2 flex items-center justify-center"><i class="fas fa-file-signature text-green-600 mr-2"></i><span class="text-sm font-bold text-green-700">ご契約③</span></div>
+                    </div>
+                    <div class="text-2xl text-gray-300 transform rotate-90 md:rotate-0"><i class="fas fa-chevron-right"></i></div>
+                    <div class="text-center p-2">
+                        <div class="p-4 bg-gray-100 rounded-lg min-h-[120px] flex flex-col justify-center">
+                            <i class="fas fa-rocket text-3xl text-gray-500 mb-2"></i>
+                            <div class="font-bold text-sm">Step 4<br>納品・リリース</div>
+                        </div>
+                    </div>
+                </div>
+                 <p class="text-center mt-6 text-md font-semibold text-red-600 bg-red-50 p-3 rounded-lg"><i class="fas fa-info-circle mr-2"></i>まずは「DX/AIコンサルティング」だけでもOK！お気軽にご相談ください。</p>
+            </div>
+
+            <!-- 6. 料金プラン -->
+            <div class="card p-6 md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.6s;">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">料金プラン</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg border-t-4 border-blue-800 shadow-md text-center flex flex-col">
+                        <h3 class="text-xl font-bold mb-3">DX/AIコンサル<br>プラン</h3>
+                        <p class="text-4xl font-bold mb-3">30<span class="text-lg">万円〜</span></p>
+                        <p class="text-slate-600 text-sm mb-4 h-20">アイデアの壁打ちから、事業企画書の作成までを支援します。</p>
+                        <ul class="text-left text-sm space-y-2 flex-grow">
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>経営課題のヒアリング</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>ビジネスモデルの具体化</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>事業企画・提案書作成</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border-t-4 border-yellow-400 shadow-lg text-center transform md:scale-105 flex flex-col">
+                        <div class="absolute top-0 -right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full transform rotate-12">一番人気</div>
+                        <h3 class="text-xl font-bold mb-3">UIデザイン<br>プラン</h3>
+                        <p class="text-4xl font-bold mb-3">98<span class="text-lg">万円〜</span></p>
+                        <p class="text-slate-600 text-sm mb-4 h-20">企画内容を元に、AIを活用して動かせるプロトタイプとシステム要件を定義します。</p>
+                        <ul class="text-left text-sm space-y-2 flex-grow">
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>コンサルティング内容すべて</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i><strong class="text-blue-800">AIによる画面デザイン生成</strong></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i><strong class="text-blue-800">インタラクティブプロトタイプ</strong></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>システム要件定義書の作成</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border-t-4 border-blue-800 shadow-md text-center flex flex-col">
+                        <h3 class="text-xl font-bold mb-3">開発・実装<br>プラン</h3>
+                        <p class="text-4xl font-bold mb-3">都度<span class="text-lg">お見積り</span></p>
+                        <p class="text-slate-600 text-sm mb-4 h-20">要件定義に基づき、最適な開発パートナーと共にシステムを構築します。</p>
+                         <ul class="text-left text-sm space-y-2 flex-grow">
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>要件定義書に基づく開発</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>プロジェクトマネジメント</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>品質テストと納品</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. 西河マネジメントセンターについて -->
+            <div class="md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.7s;">
+                <a href="https://joseikin.net/" target="_blank" class="card p-8 block transition-all duration-300 hover:ring-2 hover:ring-blue-500">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/4 text-center mb-6 md:mb-0">
+                            <i class="fas fa-building text-6xl text-blue-800"></i>
+                        </div>
+                        <div class="md:w-3/4 md:pl-8">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4">西河マネジメントセンターについて <i class="fas fa-external-link-alt text-xs text-gray-400"></i></h2>
+                            <p class="text-lg text-slate-600">
+                                私たちは、社労士・中小企業診断士事務所を母体とする経営コンサルティング企業です。助成金活用支援から人材育成、そして今回のDX/AI実装支援まで、企業の成長ステージに合わせた一気通貫のサポートを提供します。
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- CTAセクション -->
+    <section class="bg-gradient-header text-white py-16">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold mb-4">さあ、アイデアをビジネスの成長エンジンへ。</h2>
+            <p class="text-xl mb-8">まずは30分の無料相談から。貴社の可能性を一緒に探しましょう。</p>
+            <a href="https://meetings-na2.hubspot.com/fujino3" target="_blank" class="bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+                <i class="fas fa-comment-dots mr-2"></i> 無料相談を予約する
             </a>
         </div>
     </section>
-    
-    <!-- 会社概要 -->
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-10 text-center">
-            <h3 class="font-bold text-xl mb-2">西河マネジメントセンターについて</h3>
-            <p class="max-w-3xl mx-auto mb-4">私たちは、社労士・中小企業診断士事務所を母体とする経営コンサルティング企業です。助成金活用支援から人材育成、そして今回のDX/AI実装支援まで、企業の成長ステージに合わせた一気通貫のサポートを提供します。</p>
-            <p>&copy; 2025 Nishikawa Management Center. All Rights Reserved.</p>
-        </div>
+
+    <!-- フッター -->
+    <footer class="bg-slate-800 text-white text-center p-6">
+        <p>&copy; 2025 西河マネジメントセンター. All Rights Reserved.</p>
     </footer>
 
-    <!-- Swiper.js JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                 1280: {
+                    slidesPerView: 4,
+                }
             }
-        }
-      });
+        });
     </script>
-
 </body>
 </html>
-
-
 
 
