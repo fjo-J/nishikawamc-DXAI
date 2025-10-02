@@ -62,6 +62,18 @@
         .modal {
             transition: opacity 0.3s ease;
         }
+        .tag {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .tag.active {
+            background-color: #1e40af;
+            color: white;
+        }
+        .case-study-item {
+            display: flex; /* Changed for filtering */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -121,40 +133,35 @@
                 </div>
             </div>
             
-            <!-- 3. 料金プラン (旧活用パターン) -->
+            <!-- 3. 料金プラン -->
             <div class="card p-6 md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.3s;">
                 <h2 class="text-2xl font-bold text-center text-gray-800 mb-2">料金プラン</h2>
                 <p class="text-center text-slate-600 mb-8">貴社の課題に合わせた活用パターン別の料金をご確認いただけます。</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Trigger 1 -->
                     <button data-modal-target="modal-dx" class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col text-left hover:border-blue-500 hover:shadow-lg transition-all">
                         <i class="fas fa-sitemap text-4xl text-blue-500 mb-4"></i>
                         <h3 class="font-bold text-xl mb-3">社内業務DX化</h3>
                         <p class="text-gray-600 text-sm mb-4 flex-grow">稟議、経費精算、日報管理など、日々の定型業務をデジタル化します。</p>
                         <span class="mt-auto text-blue-600 font-semibold">料金を見る <i class="fas fa-arrow-right ml-1"></i></span>
                     </button>
-                    <!-- Trigger 2 -->
                     <button data-modal-target="modal-app" class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col text-left hover:border-blue-500 hover:shadow-lg transition-all">
                         <i class="fas fa-mobile-alt text-4xl text-blue-500 mb-4"></i>
                         <h3 class="font-bold text-xl mb-3">自社アプリ制作</h3>
                         <p class="text-gray-600 text-sm mb-4 flex-grow">顧客との直接的なつながりを生み出すオリジナルアプリを開発します。</p>
                         <span class="mt-auto text-blue-600 font-semibold">料金を見る <i class="fas fa-arrow-right ml-1"></i></span>
                     </button>
-                     <!-- Trigger 3 -->
                     <button data-modal-target="modal-agent" class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col text-left hover:border-blue-500 hover:shadow-lg transition-all">
                         <i class="fas fa-robot text-4xl text-blue-500 mb-4"></i>
                         <h3 class="font-bold text-xl mb-3">AIエージェント活用</h3>
                         <p class="text-gray-600 text-sm mb-4 flex-grow">問い合わせ対応やデータ入力を自動化するAIアシスタントを導入します。</p>
                         <span class="mt-auto text-blue-600 font-semibold">料金を見る <i class="fas fa-arrow-right ml-1"></i></span>
                     </button>
-                    <!-- Trigger 4 -->
                     <button data-modal-target="modal-rag" class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col text-left hover:border-blue-500 hover:shadow-lg transition-all">
                         <i class="fas fa-book-reader text-4xl text-blue-500 mb-4"></i>
                         <h3 class="font-bold text-xl mb-3">専用RAG開発</h3>
                         <p class="text-gray-600 text-sm mb-4 flex-grow">社内文書を学習した、専門的な質問に回答できるAIを構築します。</p>
                         <span class="mt-auto text-blue-600 font-semibold">料金を見る <i class="fas fa-arrow-right ml-1"></i></span>
                     </button>
-                    <!-- Trigger 5 -->
                     <button data-modal-target="modal-personalize" class="bg-slate-50 p-6 rounded-lg border h-full flex flex-col text-left hover:border-blue-500 hover:shadow-lg transition-all">
                         <i class="fas fa-user-check text-4xl text-blue-500 mb-4"></i>
                         <h3 class="font-bold text-xl mb-3">顧客体験パーソナライズ</h3>
@@ -230,6 +237,84 @@
                 </div>
                  <p class="text-center mt-6 text-md font-semibold text-red-600 bg-red-50 p-3 rounded-lg"><i class="fas fa-info-circle mr-2"></i>まずは「DX/AIコンサルティング」だけでもOK！お気軽にご相談ください。</p>
             </div>
+
+            <!-- 6. 導入例 -->
+            <div class="card p-6 md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.6s;">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-2">導入例</h2>
+                <p class="text-center text-slate-600 mb-8">※これらは本サービスを活用した場合の想定例です。</p>
+                <div id="case-studies-filter" class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button class="tag active bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold" data-filter="all">すべて</button>
+                    <span class="text-gray-400 self-center hidden md:block">|</span>
+                    <button class="tag bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold" data-filter="industry-manufacturing">製造業</button>
+                    <button class="tag bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold" data-filter="industry-retail">小売業</button>
+                    <button class="tag bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold" data-filter="industry-service">サービス業</button>
+                    <button class="tag bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold" data-filter="industry-construction">建設業</button>
+                     <button class="tag bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold" data-filter="industry-ecommerce">ECサイト</button>
+                </div>
+                <div id="case-studies-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Case Study 1 -->
+                    <div class="case-study-item flex-col md:flex-row gap-6 border rounded-lg p-6 bg-slate-50" data-tags="industry-manufacturing challenge-process">
+                        <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="製造業の導入例" class="w-full md:w-1/3 h-48 md:h-auto object-cover rounded-lg">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">製造業A社様の場合</h3>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded whitespace-nowrap">社内業務DX化</span>
+                            </div>
+                            <p class="text-sm font-semibold text-red-600 mb-2">課題：属人化した業務プロセスの改善</p>
+                            <p class="text-slate-600 text-sm">紙の生産管理表や検査記録をデジタル化するシステムを構築。入力ミスや確認工数が大幅に削減され、生産性15%向上を想定。</p>
+                        </div>
+                    </div>
+                    <!-- Case Study 2 -->
+                    <div class="case-study-item flex-col md:flex-row gap-6 border rounded-lg p-6 bg-slate-50" data-tags="industry-retail challenge-customer">
+                        <img src="https://images.unsplash.com/photo-1528698827598-9b6201611838?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="小売業の導入例" class="w-full md:w-1/3 h-48 md:h-auto object-cover rounded-lg">
+                         <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">小売業B社様の場合</h3>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded whitespace-nowrap">自社アプリ制作</span>
+                            </div>
+                            <p class="text-sm font-semibold text-red-600 mb-2">課題：リピート顧客の増加</p>
+                            <p class="text-slate-600 text-sm">ポイント機能とセール情報を配信する公式アプリを開発。プッシュ通知による再来店促進で、リピート率20%アップを想定。</p>
+                        </div>
+                    </div>
+                    <!-- Case Study 3 -->
+                    <div class="case-study-item flex-col md:flex-row gap-6 border rounded-lg p-6 bg-slate-50" data-tags="industry-service challenge-process">
+                         <img src="https://images.unsplash.com/photo-1554744512-d6c603f27c54?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="サービス業の導入例" class="w-full md:w-1/3 h-48 md:h-auto object-cover rounded-lg">
+                         <div class="flex-1">
+                             <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">サービス業C社様の場合</h3>
+                                <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded whitespace-nowrap">AIエージェント</span>
+                            </div>
+                            <p class="text-sm font-semibold text-red-600 mb-2">課題：問い合わせ対応の工数削減</p>
+                            <p class="text-slate-600 text-sm">Webサイトによくある質問を回答するAIチャットボットを導入。24時間対応が可能となり、対応工数40%削減を想定。</p>
+                        </div>
+                    </div>
+                    <!-- Case Study 4 -->
+                    <div class="case-study-item flex-col md:flex-row gap-6 border rounded-lg p-6 bg-slate-50" data-tags="industry-construction challenge-knowledge">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="建設業の導入例" class="w-full md:w-1/3 h-48 md:h-auto object-cover rounded-lg">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">建設業D社様の場合</h3>
+                                 <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded whitespace-nowrap">専用RAG開発</span>
+                            </div>
+                            <p class="text-sm font-semibold text-red-600 mb-2">課題：技術継承とナレッジ共有</p>
+                            <p class="text-slate-600 text-sm">過去の施工報告書や技術文書をAIに学習させ、若手社員が必要な情報をすぐ検索できるシステムを構築。技術習得のスピード向上を想定。</p>
+                        </div>
+                    </div>
+                     <!-- Case Study 5 -->
+                    <div class="case-study-item flex-col md:flex-row gap-6 border rounded-lg p-6 bg-slate-50" data-tags="industry-ecommerce challenge-customer">
+                        <img src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ECサイトの導入例" class="w-full md:w-1/3 h-48 md:h-auto object-cover rounded-lg">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">ECサイトE社様の場合</h3>
+                                <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded whitespace-nowrap">パーソナライズ</span>
+                            </div>
+                            <p class="text-sm font-semibold text-red-600 mb-2">課題：サイトの転換率が低い</p>
+                            <p class="text-slate-600 text-sm">AIによるレコメンドエンジンを導入し、個々の顧客に合わせた商品提案を実施。購入転換率1.8倍を想定。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- 7. 西河マネジメントセンターについて -->
             <div class="md:col-span-2 lg:col-span-3 fade-in-up" style="animation-delay: 0.7s;">
@@ -429,31 +514,15 @@
             animate();
         }
 
-        // Modal and Swiper script
+        // Scripts for modals, swiper, and case studies
         document.addEventListener('DOMContentLoaded', () => {
             initParticleSystem('particle-canvas-header');
             initParticleSystem('particle-canvas-cta');
 
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
-                }
-            });
-
+            // Modal script
             const modalTriggers = document.querySelectorAll('[data-modal-target]');
             const modalCloses = document.querySelectorAll('[data-modal-close]');
+            const modalContainer = document.getElementById('modal-container');
 
             modalTriggers.forEach(trigger => {
                 trigger.addEventListener('click', () => {
@@ -477,12 +546,10 @@
                 close.addEventListener('click', closeModals);
             });
             
-            document.querySelectorAll('.modal').forEach(modal => {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        closeModals();
-                    }
-                });
+            modalContainer.addEventListener('click', (e) => {
+                 if (e.target.classList.contains('modal')) {
+                    closeModals();
+                }
             });
 
             window.addEventListener('keydown', (e) => {
@@ -490,6 +557,38 @@
                     closeModals();
                 }
             });
+
+            // Case Studies Filter
+            const filterContainer = document.getElementById('case-studies-filter');
+            const caseItems = document.querySelectorAll('.case-study-item');
+
+            if (filterContainer) {
+                filterContainer.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'BUTTON') return;
+
+                    const filter = e.target.dataset.filter;
+
+                    // Active button style
+                    filterContainer.querySelector('.active').classList.remove('active');
+                    e.target.classList.add('active');
+
+                    // Filter logic
+                    caseItems.forEach(item => {
+                        const tags = item.dataset.tags;
+                        if (filter === 'all' || tags.includes(filter)) {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                            item.style.display = 'flex'; 
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            }
         });
     </script>
 </body>
